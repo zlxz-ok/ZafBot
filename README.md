@@ -69,11 +69,11 @@ ZafBot allows users to configure:
 - Monitoring intervals.
 
 Users are responsible for providing valid URLs and CSS selectors.
-Contact
+## Contact
 
 Have questions, suggestions, or feedback about ZafBot?
 
-Discord: zlxz-ok
+Discord: zlxz__
 
 For bug reports or feature requests, feel free to open a GitHub Issue.
 
