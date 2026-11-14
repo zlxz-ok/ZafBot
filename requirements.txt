@@ -1,0 +1,6 @@
+customtkinter
+InquirerPy
+rich
+beautifulsoup4
+selenium
+requests
