@@ -1,4 +1,4 @@
-name: Build Zafbot for Windows
+name: Build ZafBot GUI for Windows
 
 on:
   workflow_dispatch:
