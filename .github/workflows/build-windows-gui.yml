@@ -24,7 +24,7 @@ jobs:
 
       - name: Build executable
         run: |
-          python -m PyInstaller --noconfirm --clean --windowed --name Zafbot --collect-all customtkinter --collect-all selenium main.py
+          python -m PyInstaller --noconfirm --clean --onedir --windowed --name ZafBot-GUI --collect-all customtkinter --collect-all selenium main.py
 
       - name: Upload executable
         uses: actions/upload-artifact@v4
