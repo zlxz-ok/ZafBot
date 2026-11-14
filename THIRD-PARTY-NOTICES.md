@@ -1,68 +1,77 @@
-Third-Party Notices
+# Third-Party Notices
+
 ZafBot is an independent project. It uses third-party open-source packages listed below. Each package remains the property of its respective authors and is distributed under its own license.
 
-This notice is intended to accompany ZafBot source and binary distributions. It identifies the Python packages and versions reported in the maintainer's dependency review on November 13, 2026. It is an inventory based on the installed package metadata and dependency information reviewed for ZafBot; it is not a verified software bill of materials (SBOM) for each PyInstaller archive. The contents of each final Linux and Windows build should be checked separately because build environments and bundled runtime components can differ.
+This notice records the direct and transitive Python dependencies identified during the maintainer's review on November 13, 2026. Versions shown are the versions reported by the maintainer's Python environment during that review. A build made in another environment can contain different versions or additional bundled components.
 
-The links below point to the upstream projects and their license or notice files. For binary redistribution, include the applicable original license texts and copyright/NOTICE files in the distribution as described in the relevant license. A link in this index does not replace a license text or notice that must be reproduced with a binary distribution.
-Direct Dependencies
-Package Version reviewed License Upstream license / notice
-BeautifulSoup4 4.15.0 MIT COPYING.txt
-CustomTkinter 6.0.0 CC0-1.0 in package metadata; MIT in upstream LICENSE (conflicting declarations) PyPI metadata, upstream LICENSE, upstream setup.cfg
-InquirerPy 0.3.4 MIT LICENSE
-Rich 15.0.0 MIT LICENSE
-Selenium 4.52.0 Apache-2.0 LICENSE, NOTICE
-Requests 2.33.1 Apache-2.0 LICENSE, additional extension notices
+The accompanying `THIRD-PARTY-LICENSES/` directory (or `THIRD-PARTY-LICENSES.zip`) is intended to contain the original license, copyright, AUTHORS, COPYING and NOTICE files collected from the exact Python environment used for the build, plus standard license texts. Run `collect_zafbot_licenses.py` in the build environment to generate it. Review `THIRD-PARTY-LICENSES/COLLECTION-REPORT.txt` before distributing a binary.
 
-Transitive Dependencies
-The following packages were identified in the reviewed dependency tree. Their presence in a particular executable still depends on that build's environment and PyInstaller collection.
-Package Version reviewed License Upstream license / notice
-soupsieve 2.8.3 MIT Soupsieve repository
-typing_extensions 4.16.0 PSF-2.0 LICENSE
-darkdetect 0.8.0 BSD-3-Clause Darkdetect repository
-packaging 25.0 Apache-2.0 OR BSD-2-Clause Packaging repository and license files
-pfzy 0.3.4 MIT pfzy repository
-prompt-toolkit 3.0.53 BSD-3-Clause LICENSE
-wcwidth 0.9.4 MIT LICENSE
-markdown-it-py 4.2.0 MIT LICENSE
-mdurl 0.1.2 MIT LICENSE
-Pygments 2.21.0 BSD-2-Clause LICENSE, AUTHORS
-charset-normalizer 3.4.4 MIT LICENSE
-idna 3.18 BSD-3-Clause idna repository
-urllib3 2.8.0 MIT LICENSE
-certifi 2026.10.23 MPL-2.0 LICENSE, source distribution for version 2026.10.23
-trio 0.34.0 MIT OR Apache-2.0 Trio repository
-trio-websocket 0.12.2 MIT trio-websocket repository
-attrs 26.1.0 MIT attrs repository
-outcome 1.3.0.post0 MIT OR Apache-2.0 outcome repository
-sniffio 1.3.1 MIT OR Apache-2.0 sniffio repository
-sortedcontainers 2.4.0 Apache-2.0 sortedcontainers repository
-wsproto 1.3.2 MIT wsproto repository
-h11 0.16.0 MIT h11 repository
-websocket-client 1.9.2 Apache-2.0 websocket-client repository
+## Direct Dependencies
 
-Additional Copyright and Attribution Notices
-The following package-specific notices must be retained when the corresponding package is included in a distribution:
+| Package | Version reviewed | License declaration | Project |
+|---|---:|---|---|
+| BeautifulSoup4 | 4.15.0 | MIT | https://pypi.org/project/beautifulsoup4/ |
+| CustomTkinter | 6.0.0 | Conflicting declarations: package metadata says CC0-1.0; upstream LICENSE says MIT | https://pypi.org/project/customtkinter/6.0.0/ |
+| InquirerPy | 0.3.4 | MIT | https://pypi.org/project/InquirerPy/ |
+| Rich | 15.0.0 | MIT | https://pypi.org/project/rich/ |
+| Selenium | 4.52.0 | Apache-2.0 | https://pypi.org/project/selenium/ |
+| Requests | 2.33.1 | Apache-2.0 | https://pypi.org/project/requests/ |
 
-- BeautifulSoup4: its license file identifies Leonard Richardson and also identifies incorporated html5lib code. Preserve the complete upstream COPYING.txt.
-- CustomTkinter: its PyPI metadata and upstream setup.cfg identify CC0-1.0, while the upstream LICENSE file currently contains an MIT notice for Tom Schimansky. Preserve the license file supplied with the exact CustomTkinter 6.0.0 distribution and do not silently replace one declaration with the other.
-- Requests: preserve the main license and any applicable notices in its ext directory.
-- Selenium: preserve both LICENSE and NOTICE.
-- Pygments: preserve its license and applicable author attribution information.
-- wcwidth: its license file also contains a separate permission notice from Markus Kuhn. Preserve the complete file, not only the MIT portion.
-- mdurl: its license file contains additional copyright and permission text for code based on the Node.js URL implementation by Joyent, Inc. and other Node contributors. Preserve the complete file.
-  MPL-2.0 Source Availability: certifi
-  ZafBot's reviewed dependency set includes certifi 2026.10.23, which is licensed under MPL-2.0. When this component is included in a binary distribution, recipients must be told how to obtain its corresponding source code. The source distribution for the exact reviewed version is available from:
-- https://pypi.org/project/certifi/2026.10.23/#files
-  The MPL-2.0 license is available at:
-- https://www.mozilla.org/en-US/MPL/2.0/
-  No modifications to certifi are represented by this notice. If ZafBot's build uses a different certifi version, update the version and source link to match that build.
-  Build Tool: PyInstaller
-  PyInstaller is used as a build-time packaging tool, not listed as a ZafBot runtime dependency. PyInstaller's official licensing documentation states that its bootloader exception permits distribution of generated executables without including PyInstaller's license or crediting PyInstaller, provided the licenses of the application's dependencies are respected:
-- https://www.pyinstaller.org/en/stable/license.html
-  If PyInstaller itself is modified and that modified tool is redistributed, its own license requirements must be reviewed separately.
-  Build-Specific Components Not Covered by This Package Inventory
-  PyInstaller can also bundle the Python interpreter, parts of the Python standard library, and platform/runtime components. The exact Python version and any bundled Tcl/Tk or other runtime files can differ between Linux and Windows builds. Their applicable license and notice files must be checked against the actual build output before claiming that this inventory is a complete list of everything inside a release archive.
-  Project Independence
-  ZafBot is not affiliated with, endorsed by, or sponsored by the authors or maintainers of the third-party projects listed above. Product and project names are used only to identify the software components.
+## Transitive Dependencies
 
-This document is a third-party component and license index, not legal advice. It should be reviewed whenever dependency versions or build environments change.
+| Package | Version reviewed | License |
+|---|---:|---|
+| soupsieve | 2.8.3 | MIT |
+| typing_extensions | 4.16.0 | PSF-2.0 |
+| darkdetect | 0.8.0 | BSD-3-Clause |
+| packaging | 25.0 | Apache-2.0 OR BSD-2-Clause |
+| pfzy | 0.3.4 | MIT |
+| prompt-toolkit | 3.0.53 | BSD-3-Clause |
+| wcwidth | 0.9.4 | MIT |
+| markdown-it-py | 4.2.0 | MIT |
+| mdurl | 0.1.2 | MIT |
+| Pygments | 2.21.0 | BSD-2-Clause |
+| charset-normalizer | 3.4.4 | MIT |
+| idna | 3.18 | BSD-3-Clause |
+| urllib3 | 2.8.0 | MIT |
+| certifi | 2026.10.23 | MPL-2.0 |
+| trio | 0.34.0 | MIT OR Apache-2.0 |
+| trio-websocket | 0.12.2 | MIT |
+| attrs | 26.1.0 | MIT |
+| outcome | 1.3.0.post0 | MIT OR Apache-2.0 |
+| sniffio | 1.3.1 | MIT OR Apache-2.0 |
+| sortedcontainers | 2.4.0 | Apache-2.0 |
+| wsproto | 1.3.2 | MIT |
+| h11 | 0.16.0 | MIT |
+| websocket-client | 1.9.2 | Apache-2.0 |
+
+## Package-Specific Notices
+
+- **CustomTkinter 6.0.0:** The published package metadata is inconsistent: PyPI displays “MIT License (Creative Commons Zero v1.0 Universal),” its `setup.cfg` declares CC0-1.0 while also listing the MIT classifier, and the upstream `LICENSE` file contains an MIT notice. Preserve the exact `LICENSE` file from the installed distribution and include both MIT and CC0-1.0 standard license texts in the accompanying license directory. Do not describe this conflict as resolved.
+- **BeautifulSoup4:** Preserve its complete `COPYING.txt`, including the notice about incorporated html5lib code.
+- **Requests:** Preserve its `LICENSE` and applicable notices under `ext/` if those files are included in the distribution.
+- **Selenium:** Preserve both its `LICENSE` and `NOTICE` files.
+- **Pygments:** Preserve its `LICENSE` and `AUTHORS` attribution file when present.
+- **wcwidth:** Its license file includes a separate permission notice from Markus Kuhn; preserve the complete file.
+- **mdurl:** Its license file includes additional copyright and permission text for the Node.js URL implementation by Joyent, Inc. and other Node contributors; preserve the complete file.
+- **packaging:** Its project offers Apache-2.0 OR BSD-2-Clause. Either option may be used; preserve the applicable original license file(s) from the distribution.
+- **trio, outcome and sniffio:** Each offers MIT OR Apache-2.0. Preserve the license file(s) from the exact distribution.
+
+## MPL-2.0 Source Availability: certifi
+
+The reviewed dependency set includes certifi 2026.10.23, licensed under MPL-2.0. The corresponding source distribution should accompany the executable distribution or be made available through a clearly identified, durable source link. The license-collection script attempts to download the exact installed Certifi source distribution from PyPI into `THIRD-PARTY-LICENSES/SOURCE-CODE/`.
+
+Official project and source distribution: https://pypi.org/project/certifi/2026.10.23/#files
+MPL-2.0 text: https://www.mozilla.org/en-US/MPL/2.0/
+
+If the build uses a different Certifi version, use the corresponding source distribution for that version instead.
+
+## Build Tool: PyInstaller
+
+PyInstaller is a build-time tool, not a ZafBot runtime dependency. Its bootloader exception permits distribution of generated executables without imposing PyInstaller's GPL terms on the generated application, provided the licenses of bundled dependencies are respected. See the official terms: https://pyinstaller.org/en/stable/license.html
+
+## Scope and Disclaimer
+
+This list reflects the reviewed Python dependency set, not a forensic inventory of every file in each PyInstaller archive. PyInstaller can bundle the Python interpreter, standard-library components and platform-specific runtime files. The license-collection script records the environment from which it is run; use it with the same Python environment and dependency versions used for the corresponding build.
+
+ZafBot is not affiliated with, endorsed by, or sponsored by the authors or maintainers of the third-party projects listed above. This notice is an attribution and license index, not legal advice.
