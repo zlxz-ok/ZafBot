@@ -20,8 +20,9 @@ ZafBot provides two application versions:
 
 - **v0.x.x — CLI:** Command-line interface.
 - **v1.x.x — GUI:** Graphical desktop interface.
-
-Choose the version that suits your needs. Each release provides the available executables for Linux and Windows.
+  **GUI:**
+  ![Interfaz principal](images/main.png)
+  Choose the version that suits your needs. Each release provides the available executables for Linux and Windows.
 
 ## Technologies
 
@@ -69,11 +70,12 @@ ZafBot allows users to configure:
 - Monitoring intervals.
 
 Users are responsible for providing valid URLs and CSS selectors.
+
 ## Contact
 
 Have questions, suggestions, or feedback about ZafBot?
 
-Discord: zlxz__
+Discord: zlxz\_\_
 
 For bug reports or feature requests, feel free to open a GitHub Issue.
 
